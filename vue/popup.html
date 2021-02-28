@@ -6,17 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Hind&display=swap" rel="stylesheet">
 </head>
 <body>
   <div id="app">
-    <h1>{{ message }}</h1>
+    <h1>{{ title }}</h1>
     <div v-if="home">
-      <button v-on:click="createLobby">Créer un salon</button>
+      <button class="button-primary large rounded transparent-border" v-on:click="createLobby">Créer un salon</button>
+      <button class="button-secondary large rounded" v-on:click="joinLobby">Rejoindre un salon</button>
     </div>
     <div v-if="lobby">
       <p>Copie ce lien pour inviter un utilisateur.</p>
-      <input id="link" value="http://localhost:5500/lobby/123456789"/>
-      <button v-on:click="copyLink">Copier</button>
+      <input id="link" class="rounded transparent-border" value="http://localhost:5500/lobby/123456789"/>
+      <button class="rounded transparent-border" v-on:click="copyLink">Copier</button>
+      <p>Utilisateurs connectés : {{ users.length }}</p>
+    </div>
+    <div v-if="join">
+      <input id="link" class="rounded transparent-border" placeholder="Entrez le lien d'invitation"/>
+      <button class="rounded transparent-border" v-on:click="tryConnect">Rejoindre</button>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

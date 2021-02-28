@@ -1,8 +1,67 @@
 #app {
   margin: 0 auto;
   width: 400px;
-  height: 400px;
+  height: 300px;
   text-align: center;
   color: white;
-  background-color: black;
+  background-color: #16191d;
+}
+
+body {
+  font-family: Hind,San Francisco,Roboto,Arial,sans-serif;
+  font-style: normal;
+}
+
+h1 {
+  color: white;
+  text-shadow: 0 0.1rem 0.3rem rgb(0 0 0 / 70%);
+  font-family: Hind,San Francisco,Roboto,Arial,sans-serif;
+  text-decoration: underline;
+}
+
+button {
+  font-weight: 600;
+  padding: 0.5rem 1rem 0.7rem;
+  font-family: Hind,San Francisco,Roboto,Arial,sans-serif;
+  margin: 0.5rem 0;
+  cursor: pointer;
+}
+
+.button-primary {
+  background-color: #ec3655;
+  color: #fff;
+  transition: border .2s ease-out, background .2s ease-out;
+}
+
+.large {
+  font-size: 1rem;
+  width: 16rem;
+}
+
+.button-primary:hover {
+  background-color: #c82d47;
+}
+
+.button-secondary {
+  background-color: transparent;
+  border: .1rem solid rgba(255,255,254,.3);
+  color: white;
+  transition: border .2s ease-out, background .2s ease-out;
+}
+
+.button-secondary:hover {
+  background: rgba(255,255,254,.3);
+  border: .1rem solid transparent;
+}
+
+input {
+  padding: 0.5rem 1rem 0.7rem;
+}
+
+.rounded {
+  border-radius: 0.2rem;
+}
+
+.transparent-border {
+  border-color: transparent;
 }
